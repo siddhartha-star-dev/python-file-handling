@@ -3,15 +3,20 @@
 # Created on: 1st April 2020
 
 
+# Function to count me
 def Me(file):
     count = 0
     for line in file.readlines():
+        # removing escape seq. and converting to lower case
         line = line.lower().strip().split(" ")
+        # Counting number of me
         count += line.count("me")
     file.seek(0)
+    # return count
     return count
 
 
+# Same as above function but for counting you
 def You(file):
     count = 0
     for line in file.readlines():
@@ -21,6 +26,7 @@ def You(file):
     return count
 
 
+# Driver function to open file and process it
 def main(fileName, mode):
     with open(fileName, mode) as file:
         no_of_you = You(file)

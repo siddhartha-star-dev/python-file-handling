@@ -1,0 +1,2 @@
+hello this is just a test file to count the number of occurrence of the provided alphabet whatever 
+it may be.

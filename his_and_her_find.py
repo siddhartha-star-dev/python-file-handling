@@ -3,15 +3,19 @@
 # Created on: 1st April 2020
 
 
+# Function to count his
 def His(file):
     count = 0
     for line in file.readlines():
+        # removing escape seq. and converting to lower case
         line = line.lower().strip().split(' ')
+        # counting number of his
         count += line.count('his')
     file.seek(0)
     return count
 
 
+# Same as above function but for counting her
 def Her(file):
     count = 0
     for line in file.readlines():
@@ -21,6 +25,7 @@ def Her(file):
     return count
 
 
+# Driver function to open file and process it
 def main(fileName, mode):
     with open(fileName, mode) as file:
         no_of_his = His(file)
